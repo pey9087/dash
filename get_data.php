@@ -32,11 +32,11 @@ $data['inquiry']['A'] = array(5,3,0,1,2,1,3,4,1,2);
 $data['inquiry']['B'] = array(3,5,8,8,9,11,13,16,16,17);
 $data['inquiry']['C'] = array(2,1,1,1,1,1,2,2,1,1);
 
-$data['status']['A'] = array(127520,128640,129520,129840,130400,131520,132240,132400,132480,132960);
-$data['status']['A2'] = array(10641,9491,9986,8984,9946,8984,9894,9979,10791,10879);
-$data['status']['B'] = array('85시간01분','86시간16분','86시간35분','86시간56분','87시간33분','88시간08분','88시간16분','88시간27분','88시간41분','89시간04분');
+$data['status']['A'] = array('127,520','128,640','129,520','129,840','130,400','131,520','132,240','132,400','132,480','132,960');
+$data['status']['A2'] = array('10,641','9,491','9,986','8,984','9,946','8,984','9,894','9,979','10,791','10,879');
+$data['status']['B'] = array('<span class="hour">85</span>시간 <span class="min">01</span>분','<span class="hour">86</span>시간 <span class="min">16</span>분','<span class="hour">86</span>시간 <span class="min">35</span>분','<span class="hour">86</span>시간 <span class="min">56</span>분','<span class="hour">87</span>시간 <span class="min">33</span>분','<span class="hour">88</span>시간 <span class="min">08</span>분','<span class="hour">88</span>시간 <span class="min">16</span>분','<span class="hour">88</span>시간 <span class="min">27</span>분','<span class="hour">88</span>시간 <span class="min">41</span>분','<span class="hour">89</span>시간 <span class="min">04</span>분');
 $data['status']['B2'] = array(28,29,28,31,30,31,32,33,31,29);
-$data['status']['C'] = array(12752,12864,12952,12984,13040,13152,13224,13240,13248,13296);
+$data['status']['C'] = array('12,752','12,864','12,952','12,984','13,040','13,152','13,224','13,240','13,248','13,296');
 $data['status']['C2'] = array(8,7,8,9,8,8,7,9,8,9);
 $data['status']['D'] = array(0,0,0,0,0,0,0,0,0,0);
 $data['status']['D2'] = array(0,0,0,0,0,0,0,0,0,0);

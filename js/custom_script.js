@@ -22,11 +22,13 @@ $(function() {
 });
 
 
+
+// 일별 앱사용자 그래프
 function chart1() {
     am4core.useTheme(am4themes_animated);
     var chart = am4core.create("user_number", am4charts.XYChart);
 
-// Add data
+    // Add data
     chart.data = [{
         "date": "28",
         "visits": 22
@@ -120,18 +122,20 @@ function chart1() {
     }];
     chart.padding(10, 0, 0, 5);
 
-// Create axes
+    // Create axes
     var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
     categoryAxis.dataFields.category = "date";
     categoryAxis.renderer.grid.template.location = 0;
+    categoryAxis.renderer.grid.template.disabled = true;
     categoryAxis.renderer.minGridDistance = 30;
     categoryAxis.tooltip.disabled = true;
     categoryAxis.renderer.minGridDistance = 22;
 
     var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
     valueAxis.renderer.minWidth = 20;
+    valueAxis.renderer.labels.template.disabled = true;
 
-// Create series
+    // Create series
     var series = chart.series.push(new am4charts.ColumnSeries());
     series.sequencedInterpolation = true;
     series.dataFields.valueY = "visits";
@@ -143,7 +147,7 @@ function chart1() {
     series.columns.template.column.cornerRadiusTopRight = 10;
     series.columns.template.column.fillOpacity = 0.8;
 
-// on hover, make corner radiuses bigger
+    // on hover, make corner radiuses bigger
     var hoverState = series.columns.template.column.states.create("hover");
     hoverState.properties.cornerRadiusTopLeft = 0;
     hoverState.properties.cornerRadiusTopRight = 0;
@@ -153,10 +157,11 @@ function chart1() {
         return chart.colors.getIndex(target.dataItem.index);
     });
 
-// Cursor
+    // Cursor
     chart.cursor = new am4charts.XYCursor();
 }
 
+// 시간대별 PM이용 현황
 function chart2() {
     am4core.useTheme(am4themes_animated);
     var chart = am4core.create("pm_number", am4charts.XYChart);
@@ -217,26 +222,29 @@ function chart2() {
     categoryAxis.startLocation = 0.4;
     categoryAxis.endLocation = 0.6;
 
-
     var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
     valueAxis.tooltip.disabled = true;
     valueAxis.renderer.line.opacity = 0;
     valueAxis.renderer.ticks.template.disabled = true;
     valueAxis.min = 0;
+    valueAxis.renderer.labels.template.disabled = true;
 
     var lineSeries = chart.series.push(new am4charts.LineSeries());
     lineSeries.dataFields.categoryX = "time";
     lineSeries.dataFields.valueY = "income";
     lineSeries.tooltipText = "{valueY.value}";
-    lineSeries.fillOpacity = 0.5;
-    lineSeries.strokeWidth = 3;
+    lineSeries.fillOpacity = 0.2;
+    lineSeries.strokeWidth = 1;
+    lineSeries.fill = am4core.color("#a660ff");
+    lineSeries.stroke = am4core.color("#a660ff");
     lineSeries.propertyFields.stroke = "lineColor";
     lineSeries.propertyFields.fill = "lineColor";
 
     var bullet = lineSeries.bullets.push(new am4charts.CircleBullet());
-    bullet.circle.radius = 6;
-    bullet.circle.fill = am4core.color("#fff");
-    bullet.circle.strokeWidth = 3;
+    bullet.circle.radius = 5;
+    bullet.circle.fill = am4core.color("#a660ff");
+    bullet.circle.stroke = am4core.color("#a660ff");
+    bullet.circle.strokeWidth = 1;
 
     chart.cursor = new am4charts.XYCursor();
     chart.cursor.behavior = "panX";
@@ -244,6 +252,7 @@ function chart2() {
     chart.cursor.lineY.opacity = 0;
 }
 
+// Day 패스 구매 현황
 function chart3(A="4",B="3",C="0") {
     am4core.useTheme(am4themes_animated);
     var chart = am4core.create("pass_sales", am4charts.XYChart);
@@ -295,11 +304,12 @@ function chart3(A="4",B="3",C="0") {
     ]
 }
 
+// 이용자 성별/연령 현황
 function chart4(A='14',B='43',C='19',D='18',E='50') {
     am4core.useTheme(am4themes_animated);
     var chart = am4core.create("age_distribution", am4charts.XYChart);
 
-// Add data
+    // Add data
     chart.data = [{
         "age": "10대",
         "visits": A
@@ -317,17 +327,20 @@ function chart4(A='14',B='43',C='19',D='18',E='50') {
         "visits": E
     }];
 
-// Create axes
+    // Create axes
     var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
     categoryAxis.dataFields.category = "age";
     categoryAxis.renderer.grid.template.location = 0;
+    categoryAxis.renderer.grid.template.disabled = true;
     categoryAxis.renderer.minGridDistance = 30;
     categoryAxis.tooltip.disabled = true;
 
     var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
     valueAxis.renderer.minWidth = 50;
+    valueAxis.renderer.grid.template.disabled = true;
+    valueAxis.renderer.labels.template.disabled = true;
 
-// Create series
+    // Create series
     var series = chart.series.push(new am4charts.ColumnSeries());
     series.sequencedInterpolation = true;
     series.dataFields.valueY = "visits";
@@ -339,7 +352,7 @@ function chart4(A='14',B='43',C='19',D='18',E='50') {
     series.columns.template.column.cornerRadiusTopRight = 10;
     series.columns.template.column.fillOpacity = 0.8;
 
-// on hover, make corner radiuses bigger
+    // on hover, make corner radiuses bigger
     var hoverState = series.columns.template.column.states.create("hover");
     hoverState.properties.cornerRadiusTopLeft = 0;
     hoverState.properties.cornerRadiusTopRight = 0;
@@ -349,15 +362,16 @@ function chart4(A='14',B='43',C='19',D='18',E='50') {
         return chart.colors.getIndex(target.dataItem.index);
     });
 
-// Cursor
+    // Cursor
     chart.cursor = new am4charts.XYCursor();
 }
 
+// 앱사용자 현황
 function chart5(A="54",B="46") {
     am4core.useTheme(am4themes_animated);
     var chart = am4core.create("user_device", am4charts.PieChart);
 
-// Add data
+    // Add data
     chart.data = [ {
         "device": "Android",
         "user": A
@@ -366,26 +380,32 @@ function chart5(A="54",B="46") {
         "user": B
     }];
 
-// Add and configure Series
+    // Add and configure Series
     var pieSeries = chart.series.push(new am4charts.PieSeries());
     pieSeries.dataFields.value = "user";
     pieSeries.dataFields.category = "device";
     pieSeries.slices.template.stroke = am4core.color("#fff");
     pieSeries.slices.template.strokeOpacity = 1;
 
-// This creates initial animation
+    // This creates initial animation
     pieSeries.hiddenState.properties.opacity = 1;
     pieSeries.hiddenState.properties.endAngle = -90;
     pieSeries.hiddenState.properties.startAngle = -90;
 
+    pieSeries.colors.list = [
+        am4core.color("#4099ff"),
+        am4core.color("#5ad3e2"),
+    ];
+
     chart.hiddenState.properties.radius = am4core.percent(0);
 }
 
+// 매장 예약 현황
 function chart6(A="1",B="4",C="5",D="10",E="6",F="4",G="3",H="4",I="5",J="6",K="1",L="0",M="0") {
     am4core.useTheme(am4themes_animated);
     var chart = am4core.create("time_booking", am4charts.XYChart);
 
-// Add data
+    // Add data
     chart.data = [{
         "time": "10시",
         "value": A
@@ -427,7 +447,6 @@ function chart6(A="1",B="4",C="5",D="10",E="6",F="4",G="3",H="4",I="5",J="6",K="
         "value": M
     }];
 
-
     var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
     categoryAxis.renderer.grid.template.location = 0;
     categoryAxis.renderer.ticks.template.disabled = true;
@@ -438,26 +457,28 @@ function chart6(A="1",B="4",C="5",D="10",E="6",F="4",G="3",H="4",I="5",J="6",K="
     categoryAxis.startLocation = 0.4;
     categoryAxis.endLocation = 0.6;
 
-
     var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
     valueAxis.tooltip.disabled = true;
     valueAxis.renderer.line.opacity = 0;
     valueAxis.renderer.ticks.template.disabled = true;
     valueAxis.min = 0;
+    valueAxis.renderer.labels.template.disabled = true;
 
     var lineSeries = chart.series.push(new am4charts.LineSeries());
     lineSeries.dataFields.categoryX = "time";
     lineSeries.dataFields.valueY = "value";
     lineSeries.tooltipText = "{valueY.value}";
     lineSeries.fillOpacity = 0;
-    lineSeries.strokeWidth = 3;
+    lineSeries.strokeWidth = 1;
+    lineSeries.stroke = am4core.color("#044684");
     lineSeries.propertyFields.stroke = "lineColor";
     lineSeries.propertyFields.fill = "lineColor";
 
     var bullet = lineSeries.bullets.push(new am4charts.CircleBullet());
-    bullet.circle.radius = 6;
-    bullet.circle.fill = am4core.color("#fff");
-    bullet.circle.strokeWidth = 3;
+    bullet.circle.radius = 5;
+    bullet.circle.fill = am4core.color("#044684");
+    bullet.circle.stroke = am4core.color("#0076e4");
+    bullet.circle.strokeWidth = 1;
 
     chart.cursor = new am4charts.XYCursor();
     chart.cursor.behavior = "panX";

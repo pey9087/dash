@@ -11,12 +11,12 @@
 <body>
 <div id="wrap">
 	<header id="header">
-		<h1 class="brand"><a href="./dashboard.html" class="logo">Hwik Pinepass Dashboard</a></h1>
+		<h1 class="brand"><a href="./dashboard.php" class="logo">Hwik Pinepass Dashboard</a></h1>
 		<input type="text" id="datetimepicker" class="date-select" value="2021년 01월 19일 05:11">
 	</header>
 	<nav id="gnb">
 		<ul>
-			<li class="dashboard on"><a href="./dashboard.html">대쉬보드</a></li>
+			<li class="dashboard on"><a href="./dashboard.php">대쉬보드</a></li>
 			<li class="map"><a href="./map.html">지도</a></li>
 		</ul>
 	</nav>
@@ -29,19 +29,19 @@
 					<ul class="state-value">
 						<li>
 							<p class="part-tit">탑승중</p>
-							<p class="part-val"><span id="kick_A">35</span></p>
+							<p class="part-val"><span id="kick_A">0</span></p>
 						</li>
 						<li>
 							<p class="part-tit">대기중</p>
-							<p class="part-val"><span id="kick_B">52</span></p>
+							<p class="part-val"><span id="kick_B">0</span></p>
 						</li>
 						<li>
 							<p class="part-tit">충전중</p>
-							<p class="part-val"><span id="kick_C">31</span></p>
+							<p class="part-val"><span id="kick_C">0</span></p>
 						</li>
 						<li>
 							<p class="part-tit">지역이탈</p>
-							<p class="part-val">1</p>
+							<p class="part-val">0</p>
 						</li>
 					</ul>
 				</div>
@@ -50,15 +50,15 @@
 					<ul class="state-value">
 						<li>
 							<p class="part-tit">탑승중</p>
-							<p class="part-val"><span id="bike_A">35</span></p>
+							<p class="part-val"><span id="bike_A">0</span></p>
 						</li>
 						<li>
 							<p class="part-tit">대기중</p>
-							<p class="part-val"><span id="bike_B">52</span></p>
+							<p class="part-val"><span id="bike_B">0</span></p>
 						</li>
 						<li>
 							<p class="part-tit">충전중</p>
-							<p class="part-val"><span id="bike_C">31</span></p>
+							<p class="part-val"><span id="bike_C">0</span></p>
 						</li>
 						<li>
 							<p class="part-tit">지역이탈</p>
@@ -81,16 +81,16 @@
 						<tbody>
 							<tr>
 								<th scope="row">킥보드</th>
-								<td class="high"><span id="pm_kick_80">74</span></td>
-								<td><span id="pm_kick_60">20</span></td>
-								<td><span id="pm_kick_40">5</span></td>
-								<td class="low"><span id="pm_kick_30">1</span></td>
+								<td class="high"><span id="pm_kick_80">0</span></td>
+								<td><span id="pm_kick_60">0</span></td>
+								<td><span id="pm_kick_40">0</span></td>
+								<td class="low"><span id="pm_kick_30">0</span></td>
 							</tr>
 							<tr>
 								<th scope="row">전기자전거</th>
-								<td class="high"><span id="pm_bike_80">18</span></td>
-								<td><span id="pm_bike_60">10</span></td>
-								<td><span id="pm_bike_40">2</span></td>
+								<td class="high"><span id="pm_bike_80">0</span></td>
+								<td><span id="pm_bike_60">0</span></td>
+								<td><span id="pm_bike_40">0</span></td>
 								<td class="low"><span id="pm_bike_30">0</span></td>
 							</tr>
 						</tbody>
@@ -115,7 +115,7 @@
 			<div class="row even">
 				<div class="brd-box user-number">
 					<h2 class="brd-title">일별 앱사용자 (1월)</h2>
-					<p class="summary">일평균 사용자 846</p>
+					<p class="summary">일평균 사용자 <span>846</span></p>
 					<div id="user_number"></div>
 				</div>
 				<div class="brd-box pm-number">
@@ -131,10 +131,10 @@
 						</li>
 						<li>
 							<p class="part-tit">완료</p>
-							<p class="part-val"><span id="inquiry_B">15</span></p>
+							<p class="part-val"><span id="inquiry_B">0</span></p>
 						</li>
 					</ul>
-					<p class="treat-time">평균 처리시간  <span id="inquiry_C">2</span>분</p>
+					<p class="treat-time">평균 처리시간 <span class="green"><span id="inquiry_C">0</span>분</span></p>
 				</div>
 			</div>
 
@@ -146,22 +146,22 @@
 						<li>
 							<p class="part-tit">이동거리</p>
 							<div class="part-val">
-								<p class="current"><span id="status_A">161,161</span>m</p>
-								<p class="average">평균 <span id="status_A2">2,461</span></p>
+								<p class="current"><span id="status_A">0</span>m</p>
+								<p class="average">평균 <span id="status_A2">0</span>m</p>
 							</div>
 						</li>
 						<li>
 							<p class="part-tit">이용시간</p>
 							<div class="part-val">
-								<p class="current"><span id="status_B">94시간 18분</span></p>
-								<p class="average">평균 <span id="status_B2"></span>분</p>
+                                <p class="current"><span id="status_B"><span class="hour">0</span>시간 <span class="min">0</span>분</span></p>
+								<p class="average">평균 <span id="status_B2">0</span>분</p>
 							</div>
 						</li>
 						<li>
 							<p class="part-tit">이용횟수</p>
 							<div class="part-val">
-								<p class="current"><span id="status_C">3,461</span>건</p>
-								<p class="average">평균 <span id="status_C2">4건</span></p>
+								<p class="current"><span id="status_C">0</span>건</p>
+								<p class="average">평균 <span id="status_C2">0</span>건</p>
 							</div>
 						</li>
 						<li>
@@ -175,7 +175,10 @@
 				</div>
 				<div class="brd-box pass-sales">
 					<h2 class="brd-title">Day 패스 구매 현황</h2>
-					<p class="summary">누적 <span id="pass_A">651</span> / 금일 <span id="pass_B">6</span>건</p>
+					<div class="summary">
+                        <p>누적 <span id="pass_A">0</span></p>
+                        <p>금일 <span><span id="pass_B">0</span>건</span></p>
+                    </div>
 
 					<div id="pass_sales"></div>
 				</div>
@@ -211,19 +214,37 @@
 						</tbody>
 					</table>
 				</div>
-				<div class="brd-box">
+				<div class="brd-box gen-distribution">
 					<h2 class="brd-title">이용자 성별/연령 현황</h2>
-					<p class="summary">남자 <span id="sex_man">58</span>% / 여자 <span id="sex_woman">42</span>%</p>
+					<div class="summary">
+                        <p class="male">
+                            <span class="tit">남자</span>
+                            <span id="sex_man">58</span>%
+                        </p>
+                        <p class="female">
+                            <span class="tit">여자</span>
+                            <span id="sex_woman">42</span>%
+                        </p>
+                    </div>
 					<div id="age_distribution"></div>
 				</div>
-				<div class="brd-box">
+				<div class="brd-box app-user">
 					<h2 class="brd-title">앱사용자 현황</h2>
-					<p class="summary">Android <span id="phone_A">54</span>% / iOS <span id="phone_B">46</span>%</p>
+					<div class="summary">
+                        <p class="android">
+                            <span class="tit">Android</span>
+                            <span id="phone_A">54</span>%
+                        </p>
+                        <p class="android">
+                            <span class="tit">iOS</span>
+                            <span id="phone_B">46</span>%
+                        </p>
+                    </div>
 					<div id="user_device"></div>
 				</div>
 				<div class="brd-box">
 					<h2 class="brd-title">매장 예약 현황</h2>
-					<p class="summary">금일예약 6건</p>
+					<p class="summary">금일예약 <span>6건</span></p>
 					<div id="time_booking"></div>
 				</div>
 			</div>
