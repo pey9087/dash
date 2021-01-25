@@ -1,0 +1,16 @@
+!.gitignore
+.DS_Store
+
+application/cache/*
+!application/cache/index.html
+!application/cache/.htaccess
+
+application/logs/*
+!application/logs/index.html
+.htaccess
+*.swp
+*.swo
+uploads/*
+photo/*
+assets/data/*
+.idea/*
