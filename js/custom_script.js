@@ -31,94 +31,94 @@ function chart1() {
     // Add data
     chart.data = [{
         "date": "28",
-        "visits": 22
+        "visits": 132
     }, {
         "date": "29",
-        "visits": 23
+        "visits": 146
     }, {
         "date": "30",
-        "visits": 14
+        "visits": 151
     }, {
         "date": "31",
-        "visits": 10
+        "visits": 187
     }, {
         "date": "1",
-        "visits": 31
+        "visits": 194
     }, {
         "date": "2",
-        "visits": 46
+        "visits": 231
     }, {
         "date": "3",
-        "visits": 38
+        "visits": 220
     }, {
         "date": "4",
-        "visits": 31
+        "visits": 224
     }, {
         "date": "5",
-        "visits": 28
+        "visits": 194
     }, {
         "date": "6",
-        "visits": 26
+        "visits": 209
     }, {
         "date": "7",
-        "visits": 20
+        "visits": 199
     }, {
         "date": "8",
-        "visits": 12
+        "visits": 216
     }, {
         "date": "9",
-        "visits": 33
+        "visits": 267
     }, {
         "date": "10",
-        "visits": 28
+        "visits": 255
     }, {
         "date": "11",
-        "visits": 11
+        "visits": 249
     }, {
         "date": "12",
-        "visits": 7
+        "visits": 241
     }, {
         "date": "13",
-        "visits": 5
+        "visits": 223
     }, {
         "date": "14",
-        "visits": 8
+        "visits": 230
     }, {
         "date": "15",
-        "visits": 9
+        "visits": 259
     }, {
         "date": "16",
-        "visits": 34
+        "visits": 267
     }, {
         "date": "17",
-        "visits": 28
+        "visits": 299
     }, {
         "date": "18",
-        "visits": 24
+        "visits": 356
     }, {
         "date": "19",
-        "visits": 18
+        "visits": 389
     }, {
         "date": "20",
-        "visits": 11
+        "visits": 409
     }, {
         "date": "21",
-        "visits": 8
+        "visits": 463
     }, {
         "date": "22",
-        "visits": 26
+        "visits": 488
     }, {
         "date": "23",
-        "visits": 21
+        "visits": 523
     }, {
         "date": "24",
-        "visits": 16
+        "visits": 567
     }, {
         "date": "25",
-        "visits": 14
+        "visits": 555
     }, {
         "date": "26",
-        "visits": 10
+        "visits": 537
     }];
     chart.padding(10, 0, 0, 5);
 

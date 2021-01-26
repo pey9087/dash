@@ -34,24 +34,72 @@ $data['inquiry']['C'] = array(2,1,1,1,1,1,2,2,1,1);
 
 $data['status']['A'] = array('127,520','128,640','129,520','129,840','130,400','131,520','132,240','132,400','132,480','132,960');
 $data['status']['A2'] = array('10,641','9,491','9,986','8,984','9,946','8,984','9,894','9,979','10,791','10,879');
-$data['status']['B'] = array('<span class="hour">85</span>시간 <span class="min">01</span>분','<span class="hour">86</span>시간 <span class="min">16</span>분','<span class="hour">86</span>시간 <span class="min">35</span>분','<span class="hour">86</span>시간 <span class="min">56</span>분','<span class="hour">87</span>시간 <span class="min">33</span>분','<span class="hour">88</span>시간 <span class="min">08</span>분','<span class="hour">88</span>시간 <span class="min">16</span>분','<span class="hour">88</span>시간 <span class="min">27</span>분','<span class="hour">88</span>시간 <span class="min">41</span>분','<span class="hour">89</span>시간 <span class="min">04</span>분');
+$data['status']['B'] = array(
+    '<span class="hour">140</span>시간 <span class="min">01</span>분',
+    '<span class="hour">140</span>시간 <span class="min">16</span>분',
+    '<span class="hour">140</span>시간 <span class="min">35</span>분',
+    '<span class="hour">140</span>시간 <span class="min">56</span>분',
+    '<span class="hour">141</span>시간 <span class="min">33</span>분',
+    '<span class="hour">141</span>시간 <span class="min">08</span>분',
+    '<span class="hour">141</span>시간 <span class="min">16</span>분',
+    '<span class="hour">141</span>시간 <span class="min">27</span>분',
+    '<span class="hour">141</span>시간 <span class="min">41</span>분',
+    '<span class="hour">142</span>시간 <span class="min">04</span>분');
 $data['status']['B2'] = array(28,29,28,31,30,31,32,33,31,29);
-$data['status']['C'] = array('12,752','12,864','12,952','12,984','13,040','13,152','13,224','13,240','13,248','13,296');
+$data['status']['C'] = array('1,409','1,411','1,411','1,416','1,423','1,425','1,425','1,426','1,430','1,432');
 $data['status']['C2'] = array(8,7,8,9,8,8,7,9,8,9);
 $data['status']['D'] = array(0,0,0,0,0,0,0,0,0,0);
 $data['status']['D2'] = array(0,0,0,0,0,0,0,0,0,0);
 
-$data['pass']['A'] = array(1594,1601,1610,1620,1630,1643,1656,1670,1685,1701);
+$data['pass']['A'] = array(1198,1205,1214,1224,1234,1247,1260,1274,1289,1305);
 $data['pass']['B'] = array(7,9,10,10,13,13,14,15,16,17);
 $data['pass']['C'] = array(4,5,5,5,7,7,7,8,9,10);
 $data['pass']['D'] = array(3,4,5,5,6,6,7,7,7,7);
 $data['pass']['E'] = array(0,0,0,0,0,0,0,0,0,0);
 
 $data['join']['A'] = array(4981,4990,5021,5055,5097,5142,5172,5215,5241,5251);
-$data['join']['B'] = array(9,31,34,42,45,30,43,26,10,19);
-$data['join']['C'] = array(1,10,8,11,11,9,14,6,3,7);
-$data['join']['D'] = array(8,15,17,25,25,16,22,15,5,10);
-$data['join']['E'] = array(0,6,9,6,9,5,7,5,2,2);
+$data['join']['B'] = array(16,28,31,35,46,54,63,71,75,82);
+$data['join']['PHONE_A'] = array('1,245','1,248','1,252','1,257','1,264','1,274','1,286','1,299','1,314','1,331');
+$data['join']['PHONE_B'] = array(1,3,4,6,10,13,13,13,14,15);
+$data['join']['PHONE_C'] = array(
+    '<span class="low">↓ 10</span>',
+    '<span class="low">↓ 8</span>',
+    '<span class="low">↓ 7</span>',
+    '<span class="low">↓ 5</span>',
+    '<span class="low">↓ 1</span>',
+    '<span class="high">↑ 2</span>',
+    '<span class="high">↑ 2</span>',
+    '<span class="high">↑ 2</span>',
+    '<span class="high">↑ 3</span>',
+    '<span class="high">↑ 4</span>'
+);
+$data['join']['KAKAO_A'] = array('2,092','2,097','2,103','2,111','2,124','2,140','2,160','2,183','2,208','2,235');
+$data['join']['KAKAO_B'] = array(8,9,10,10,15,17,21,24,25,28);
+$data['join']['KAKAO_C'] = array(
+    '<span class="low">↓ 15</span>',
+    '<span class="low">↓ 14</span>',
+    '<span class="low">↓ 13</span>',
+    '<span class="low">↓ 8</span>',
+    '<span class="low">↓ 6</span>',
+    '<span class="low">↓ 2</span>',
+    '<span class="high">↑ 1</span>',
+    '<span class="high">↑ 2</span>',
+    '<span class="high">↑ 5</span>'
+);
+$data['join']['NAVER_A'] = array('1,644','1,648','1,653','1,659','1,669','1,681','1,697','1,715','1,734','1,756');
+$data['join']['NAVER_B'] = array(0,0,1,3,5,8,13,18,20,23);
+$data['join']['NAVER_C'] = array(
+    '<span class="low">↓ 18</span>',
+    '<span class="low">↓ 18</span>',
+    '<span class="low">↓ 17</span>',
+    '<span class="low">↓ 15</span>',
+    '<span class="low">↓ 13</span>',
+    '<span class="low">↓ 10</span>',
+    '<span class="low">↓ 5</span>',
+    '<span class="high">↑ 0</span>',
+    '<span class="high">↑ 2</span>',
+    '<span class="high">↑ 5</span>'
+);
 
 $data['sex']['man'] = array(59,59,59,58,58,57,57,58,58,57);
 $data['sex']['woman'] = array(41,41,41,42,42,43,43,42,42,43);
@@ -123,9 +171,15 @@ $rs_data = [
 
     'join_A' => $data['join']['A'][$get_data],
     'join_B' => $data['join']['B'][$get_data],
-    'join_C' => $data['join']['C'][$get_data],
-    'join_D' => $data['join']['D'][$get_data],
-    'join_E' => $data['join']['E'][$get_data],
+    'PHONE_A' => $data['join']['PHONE_A'][$get_data],
+    'PHONE_B' => $data['join']['PHONE_B'][$get_data],
+    'PHONE_C' => $data['join']['PHONE_C'][$get_data],
+    'KAKAO_A' => $data['join']['KAKAO_A'][$get_data],
+    'KAKAO_B' => $data['join']['KAKAO_B'][$get_data],
+    'KAKAO_C' => $data['join']['KAKAO_C'][$get_data],
+    'NAVER_A' => $data['join']['NAVER_A'][$get_data],
+    'NAVER_B' => $data['join']['NAVER_B'][$get_data],
+    'NAVER_C' => $data['join']['NAVER_C'][$get_data],
 
     'sex_man' => $data['sex']['man'][$get_data],
     'sex_woman' => $data['sex']['woman'][$get_data],

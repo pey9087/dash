@@ -115,7 +115,7 @@
 			<div class="row even">
 				<div class="brd-box user-number">
 					<h2 class="brd-title">일별 앱사용자 (1월)</h2>
-					<p class="summary">일평균 사용자 <span>846</span></p>
+					<p class="summary">일평균 사용자 <span>309</span></p>
 					<div id="user_number"></div>
 				</div>
 				<div class="brd-box pm-number">
@@ -192,24 +192,24 @@
 							<tr>
 								<th scope="col"></th>
 								<th scope="col">누적 <span id="join_A">6,051</span></th>
-								<th scope="col">Today 51</th>
+								<th scope="col">Today <span id="join_B">51</span></th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<th scope="row">휴대폰</th>
-								<td>1,301</td>
-								<td>31 <span class="low">↓ 1</span></td>
+								<td><span id="PHONE_A">1,301</span></td>
+								<td><span id="PHONE_B">31</span> <span id="PHONE_C"><span class="low">↓ 1</span></span></td>
 							</tr>
 							<tr>
 								<th scope="row">카카오톡</th>
-								<td>2,584</td>
-								<td>54 <span class="high">↑ 5</span></td>
+								<td><span id="KAKAO_A">2,584</span></td>
+								<td><span id="KAKAO_B">54</span> <span id="KAKAO_C"><span class="high">↑ 5</span></span></td>
 							</tr>
 							<tr>
 								<th scope="row">네이버</th>
-								<td>4,166</td>
-								<td>66 <span class="high">↑ 5</span></td>
+								<td><span id="NAVER_A">4,166</span></td>
+								<td><span id="NAVER_B">66</span> <span id="NAVER_C"><span class="high">↑ 5</span></span></td>
 							</tr>
 						</tbody>
 					</table>
