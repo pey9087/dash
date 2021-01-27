@@ -1,6 +1,24 @@
 <?php
 include_once('../common.php');
+header('Content-Type: application/json; charset=UTF-8');
+// Allow from any origin
+if (isset($_SERVER['HTTP_ORIGIN'])) {
+    header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+    header('Access-Control-Allow-Credentials: true');
+    header('Access-Control-Max-Age: 86400');    // cache for 1 day
+}
 
+// Access-Control headers are received during OPTIONS requests
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+
+    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
+        header("Access-Control-Allow-Methods: GET, POST, OPTIONS");         
+
+    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
+        header("Access-Control-Allow-Headers:        {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
+
+    exit(0);
+}
 $get_data = $_GET['num'];
 
 $data = [];
@@ -51,7 +69,7 @@ $data['status']['C2'] = array(8,7,8,9,8,8,7,9,8,9);
 $data['status']['D'] = array(0,0,0,0,0,0,0,0,0,0);
 $data['status']['D2'] = array(0,0,0,0,0,0,0,0,0,0);
 
-$data['pass']['A'] = array(1198,1205,1214,1224,1234,1247,1260,1274,1289,1305);
+$data['pass']['A'] = array('1,198','1,205','1,214','1,224','1,234','1,247','1,260','1,274','1,289','1,305');
 $data['pass']['B'] = array(7,9,10,10,13,13,14,15,16,17);
 $data['pass']['C'] = array(4,5,5,5,7,7,7,8,9,10);
 $data['pass']['D'] = array(3,4,5,5,6,6,7,7,7,7);

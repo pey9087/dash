@@ -5,14 +5,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
     <title>Hwik Pinepass Dashboard</title>
-	<link rel="stylesheet" href="css/jquery-ui-1.12.1.css">
+	<link rel="stylesheet" href="css/jquery.datetimepicker.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div id="wrap">
 	<header id="header">
 		<h1 class="brand"><a href="./dashboard.php" class="logo">Hwik Pinepass Dashboard</a></h1>
-		<input type="text" id="datepicker" class="date-select">
+		<input type="text" id="datetimepicker" class="date-select" value="2021년 01월 19일 05:11">
 	</header>
 	<nav id="gnb">
 		<ul>
@@ -115,7 +115,7 @@
 			<div class="row even">
 				<div class="brd-box user-number">
 					<h2 class="brd-title">일별 앱사용자 (1월)</h2>
-					<p class="summary">일평균 사용자 <span>309</span></p>
+					<p class="summary">일평균 사용자 <span>309 </span></p>
 					<div id="user_number"></div>
 				</div>
 				<div class="brd-box pm-number">
@@ -253,7 +253,7 @@
 	<footer id="footer">Hwik Pinepass Dashboard © 2020 All Rights Reserved</footer>
 </div>
 <script src="js/jquery-1.12.4.min.js"></script>
-<script src="js/jquery-ui-1.12.1.js"></script>
+<script src="js/jquery.datetimepicker.full.min.js"></script>
 <script src="js/core.js"></script>
 <script src="js/charts.js"></script>
 <script src="js/animated.js"></script>
