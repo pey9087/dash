@@ -1,27 +1,25 @@
 $(function() {
-    jQuery.datetimepicker.setLocale('ko');
-    $('#datetimepicker').datetimepicker({
-        i18n:{
-            ko:{
-                months:[
-                    '1월','2월','3월','4월',
-                    '5월','6월','7월','8월',
-                    '9월','10월','11월','12월',
-                ],
-                dayOfWeek:[
-                    '일', '월', '화', '수',
-                    '목', '금', '토',
-                ]
-            }
-        },
-        format:'Y년 m월 d일 H:i',
-        maxDate: 0,
-        maxTime:0,
-        startDate:new Date()
+    $("#datepicker").datepicker({
+        dateFormat: 'yy년 mm월 dd일'
+        ,showOtherMonths: true
+        ,showMonthAfterYear: true
+        ,yearSuffix: "년 "
+        ,changeYear: true
+        ,changeMonth: true
+        ,showOn: "focus"
+        ,monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월']
+        ,monthNames: ['01 <span>/</span>','02 <span>/</span>','03 <span>/</span>','04 <span>/</span>','05 <span>/</span>',
+            '06 <span>/</span>','07 <span>/</span>','08 <span>/</span>','09 <span>/</span>','10 <span>/</span>','11 <span>/</span>','12 <span>/</span>']
+        ,dayNamesMin: ['일','월','화','수','목','금','토']
+        ,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일']
+        ,minDate: "-5Y"
+        ,maxDate: "today"
+        ,closeText: "닫기"
+        ,prevText: "이전 달"
+        ,nextText: "다음 달"
+        ,showButtonPanel: true
     });
 });
-
-
 
 // 일별 앱사용자 그래프
 function chart1() {
@@ -241,7 +239,7 @@ function chart2() {
     lineSeries.propertyFields.fill = "lineColor";
 
     var bullet = lineSeries.bullets.push(new am4charts.CircleBullet());
-    bullet.circle.radius = 5;
+    bullet.circle.radius = 4.5;
     bullet.circle.fill = am4core.color("#a660ff");
     bullet.circle.stroke = am4core.color("#a660ff");
     bullet.circle.strokeWidth = 1;
@@ -475,7 +473,7 @@ function chart6(A="1",B="4",C="5",D="10",E="6",F="4",G="3",H="4",I="5",J="6",K="
     lineSeries.propertyFields.fill = "lineColor";
 
     var bullet = lineSeries.bullets.push(new am4charts.CircleBullet());
-    bullet.circle.radius = 5;
+    bullet.circle.radius = 4.5;
     bullet.circle.fill = am4core.color("#044684");
     bullet.circle.stroke = am4core.color("#0076e4");
     bullet.circle.strokeWidth = 1;
